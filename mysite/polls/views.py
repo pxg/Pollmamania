@@ -2,6 +2,8 @@
 from django.shortcuts import render_to_response, get_object_or_404
 from polls.models import Poll
 from django.http import Http404
+# is the following line needed?
+from django.conf.urls import url
 #from django.http import HttpResponse
 
 def index(request):
