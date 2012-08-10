@@ -3,7 +3,6 @@ from django.views.generic import DetailView, ListView
 from polls.models import Poll
 
 urlpatterns = patterns('',
-    url(r'^(?P<poll_id>\d+)/choice/$', 'polls.views.suggest_choice'),
     url(r'^$',
         ListView.as_view(
             queryset=Poll.objects.order_by('-pub_date')[:5],
@@ -21,4 +20,6 @@ urlpatterns = patterns('',
             template_name='polls/results.html'),
         name='poll_results'),
     url(r'^(?P<poll_id>\d+)/vote/$', 'polls.views.vote'),
+    url(r'^(?P<poll_id>\d+)/suggest_choice/$', 'polls.views.suggest_choice'),
+    url(r'^(?P<poll_id>\d+)/process_suggest_choice/$', 'polls.views.process_suggest_choice'),
 )
