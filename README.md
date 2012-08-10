@@ -3,8 +3,6 @@ Django_tutorial
 
 Polls to do list:
 
-# add a header and footer. Link to main poll. Add a picture
-# add some simple css
 # homepage as polls
 
 # let the user suggest a poll option if one isn't present

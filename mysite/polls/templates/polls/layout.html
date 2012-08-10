@@ -8,7 +8,9 @@
 
     <body>
 
-        <h1><a href="/polls/">Pollmainia!</a></h1>
+        <h1><a href="{% url poll_index %}">Pollmainia!</a></h1>
+
+        <img id="deocration" src="{{STATIC_URL}}polls/img/polar-bear-face.jpg">
 
         {% block content %}
         {% endblock %}
