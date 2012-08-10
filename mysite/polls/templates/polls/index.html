@@ -1,0 +1,15 @@
+{% if user %}
+	<h1>Hello {{user}}</h1>
+{% else %}
+	<h1>Hey brother</h1>
+{% endif %}
+
+{% if latest_poll_list %}
+    <ul>
+    {% for poll in latest_poll_list %}
+        <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
