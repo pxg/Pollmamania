@@ -1,7 +1,11 @@
+{% extends 'polls/layout.html' %}
+
+{% block content %}
+
 {% if user %}
-	<h1>Hello {{user}}</h1>
+	<h2>Hello {{user}}</h2>
 {% else %}
-	<h1>Hey brother</h1>
+	<h2>Hey brother</h2>
 {% endif %}
 
 {% if latest_poll_list %}
@@ -13,3 +17,5 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+
+{% endblock %}
