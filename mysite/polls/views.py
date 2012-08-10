@@ -31,9 +31,10 @@ def suggest_choice(request, poll_id):
 
 # Validate the choice and error if not appropriate, should this be called process_suggest_choice
 def process_suggest_choice(request, poll_id):
-    # Validate the information
-    # Show the form again if not valid
-    # If valid then redirect and set succcess message
+    #TODO: research Django forms!
+    #TODO: Validate the information (no duplicates) is this preventing againsts SQL injection?
+    #TODO: Show the form again if not valid
+    #TODO: set succcess message
     p = get_object_or_404(Poll, pk=poll_id)
     p.choice_set.create(choice_text=request.POST['choice'], votes=0)
     return HttpResponseRedirect(reverse('poll_detail', args=(p.id,)))
