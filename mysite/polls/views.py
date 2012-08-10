@@ -22,6 +22,7 @@ def vote(request, poll_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('poll_results', args=(p.id,)))
 
-def results(request, poll_id):
+def suggest_choice(request, poll_id):
+    #TODO: add choice handling here
     p = get_object_or_404(Poll, pk=poll_id)
-    return render_to_response('polls/results.html', {'poll': p})
+    return render_to_response('polls/suggest_choice.html', {'poll': p}, context_instance=RequestContext(request))

@@ -3,8 +3,6 @@ Django_tutorial
 
 Polls to do list:
 
-# homepage as polls
-
 # let the user suggest a poll option if one isn't present
 # let the admin see suggested poll options and approve/delete them
 
@@ -25,3 +23,5 @@ Polls to do list:
 
 # run unit tests
 # registration system
+
+# set page title and meta tags for each template
