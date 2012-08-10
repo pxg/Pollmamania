@@ -9,7 +9,7 @@ def index(request):
     return render_to_response('polls/index.html', {'latest_poll_list': latest_poll_list})
 
 def detail(request, poll_id):
-	# shorthand helper function
+    # shorthand helper function
     p = get_object_or_404(Poll, pk=poll_id)
     return render_to_response('polls/detail.html', {'poll': p},
                                context_instance=RequestContext(request))
