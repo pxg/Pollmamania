@@ -38,3 +38,8 @@ def process_suggest_choice(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)
     p.choice_set.create(choice_text=request.POST['choice'], votes=0)
     return HttpResponseRedirect(reverse('poll_detail', args=(p.id,)))
+
+def search(request):
+    # look up poll items that match the search
+    # render template
+    return render_to_response('polls/search.html', {}, context_instance=RequestContext(request))

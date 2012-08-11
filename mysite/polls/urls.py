@@ -8,6 +8,7 @@ urlpatterns = patterns('',
             queryset=Poll.objects.order_by('-pub_date')[:5],
             context_object_name='latest_poll_list',
             template_name='polls/index.html'),
+            # is it possible to set extra variables for the template here
         name='poll_index'),
     url(r'^(?P<pk>\d+)/$',
         DetailView.as_view(
@@ -22,4 +23,5 @@ urlpatterns = patterns('',
     url(r'^(?P<poll_id>\d+)/vote/$', 'polls.views.vote'),
     url(r'^(?P<poll_id>\d+)/suggest_choice/$', 'polls.views.suggest_choice'),
     url(r'^(?P<poll_id>\d+)/process_suggest_choice/$', 'polls.views.process_suggest_choice'),
+    url(r'^search', 'polls.views.search'),
 )
