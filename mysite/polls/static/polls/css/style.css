@@ -13,3 +13,12 @@ img#deocration{
 div#search{
 	float: right;
 }
+
+a.logo{
+	text-decoration: none;
+	color: red;
+}
+
+.footer{
+	font-size: 80%;
+}

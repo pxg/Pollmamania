@@ -3,7 +3,6 @@ Django_tutorial
 
 Polls to do list:
 
-# add search to layout
 # style layout more nicely (css)
 # ascii art header?
 
