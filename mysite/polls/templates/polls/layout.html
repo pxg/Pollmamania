@@ -10,9 +10,17 @@
 
         <h1><a href="{% url poll_index %}">Pollmainia!</a></h1>
 
+        <div id="search">
+            <form action="{% url polls.views.search %}" method="GET">
+                <label for="q">Search Polls: </label>
+                <input type="text" name="q" value="{{ query|escape }}">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
         <ul>
             <li><a href="{% url poll_index %}">All Polls</a></li>
-            <li><a href="{% url polls.views.search %}">Search Polls</a></li>
+            <!--<li><a href="{% url polls.views.search %}">Search Polls</a></li>-->
             <li><a href="">Feedback</a></li>
         </ul>
 

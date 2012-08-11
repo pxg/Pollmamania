@@ -5,11 +5,13 @@
 <h2>Search</h2>
 
 <!-- . didn't work for some reason -->
+<!--
 <form action="" method="GET">
     <label for="q">Search: </label>
     <input type="text" name="q" value="{{ query|escape }}">
     <input type="submit" value="Search">
 </form>
+-->
 
 {% if query %}
     <p><strong>Results for "{{ query|escape }}":</strong></p>
