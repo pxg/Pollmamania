@@ -340,6 +340,10 @@ a.logo{
     text-decoration: none;
 }
 
+pre{
+    font-family: monospace;
+}
+
 .footer{
     font-size: 80%;
 }
