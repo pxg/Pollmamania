@@ -4,7 +4,7 @@ Django_tutorial
 Polls to do list:
 
 # style layout more nicely (css)
-# ascii art header?
+# pieface character (paint?)
 
 # add a contact form page (different app)
 # email from contact poll

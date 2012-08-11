@@ -8,38 +8,45 @@
 
     <body>
 
-        <div id="search">
-            <form action="{% url polls.views.search %}" method="GET">
-                <label for="q">Search Polls: </label>
-                <input type="text" name="q" value="{{ query|escape }}">
-                <input type="submit" value="Search">
-            </form>
-        </div>
 
-        <a class="logo" href="{% url poll_index %}">
-            <pre>
+        <div class="wrapper">
+
+            <div id="search">
+                <form action="{% url polls.views.search %}" method="GET">
+                    <!--<label for="q">Search Polls: </label>-->
+                    <input type="text" name="q" value="{{ query|escape }}">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+
+            <a class="logo" href="{% url poll_index %}">
+                <pre>
   ____       _ _                       _       
  |  _ \ ___ | | |_ __ ___   __ _ _ __ (_) __ _ 
  | |_) / _ \| | | '_ ` _ \ / _` | '_ \| |/ _` |
  |  __/ (_) | | | | | | | | (_| | | | | | (_| |
  |_|   \___/|_|_|_| |_| |_|\__,_|_| |_|_|\__,_|
                                                
-            </pre>
-        </a>
+                </pre>
+            </a>
 
-        <ul>
-            <li><a href="{% url poll_index %}">All Polls</a></li>
-            <!--<li><a href="{% url polls.views.search %}">Search Polls</a></li>-->
-            <li><a href="">Feedback</a></li>
-        </ul>
+            <ul id="nav" class="clearfix">
+                <li><a href="{% url poll_index %}">All Polls</a></li>
+                <li><a href="">Random Poll</a></li>
+                <li><a href="">Create Poll</a></li>
+                <!--<li><a href="{% url polls.views.search %}">Search Polls</a></li>-->
+                <li><a href="">Feedback</a></li>
+            </ul>
 
-        <img id="deocration" src="{{STATIC_URL}}polls/img/polar-bear-face.jpg">
+            <!--
+            <img id="deocration" src="{{STATIC_URL}}polls/img/polar-bear-face.jpg">
+            -->
 
-        {% block content %}
-        {% endblock %}
+            {% block content %}
+            {% endblock %}
 
-        <!-- add clearfix before footer -->
-        <p class="footer">Pollmania was brought to you by PXG</p>
-
+            <!-- add clearfix before footer -->
+            <p class="clearfix footer">Pollmania was brought to you by PXG</p>
+        <div>
     </body>
 </html>
