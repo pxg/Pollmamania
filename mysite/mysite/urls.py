@@ -6,4 +6,5 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^', include('polls.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^feedback$', 'contact.views.index'),
 )

@@ -3,9 +3,7 @@ Django_tutorial
 
 Polls to do list:
 
-# add random poll page
-
-# add a contact form page (different app)
+# add a contact form page (different app) http://www.djangobook.com/en/1.0/chapter07/
 # email from contact poll
 
 # pieface character (paint?)
@@ -16,14 +14,13 @@ Polls to do list:
 # let users create polls
 
 # soft delete on polls
-# let user create a poll in a poll daddy style
-# let user upload an image
+# let user upload an image (admin first then on site)
 
-# add a date to show polls currently open, add a poll archive feature
+# add a start and end_dates to determine which polls are currently open
 # output the poll list as xml and json
 # output the poll results as xml and json
 
-# add an Ajax form for voting in polls (web service)
+# add an Ajax form for voting in polls (using web service)
 
 # run a Django script from the command line (vote in poll, vote from twitter?)
 # publish daily poll (weighting system, cron? store published date in the db if not done already)
@@ -33,6 +30,7 @@ Polls to do list:
 
 # run unit tests
 # registration system
+# pagnation to homepage
 
 # CMS: defaults in admin for time and date
 # CMS: validatoin in admin for question length

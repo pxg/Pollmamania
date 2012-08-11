@@ -43,7 +43,7 @@ def process_suggest_choice(request, poll_id):
 def search(request):
     query = request.GET.get('q', '')
     if query:
-        print 'got query' # prints to console is development setup
+        #print 'got query' # prints to console is development setup
         qset = (
             Q(question__icontains=query) |
             Q(choice__choice_text__icontains=query)
