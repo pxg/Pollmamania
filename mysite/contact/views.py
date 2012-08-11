@@ -1,8 +1,10 @@
-from django.template import RequestContext
-from django.shortcuts import render_to_response
-from forms import ContactForm
 from django.core.mail import send_mail
+from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from forms import ContactForm
+
 
 def index(request):
     if request.method == 'POST':
@@ -19,9 +21,12 @@ def index(request):
                 message, sender,
                 ['petegraham1@gmail.com']
             )
-            # could we set a message on the original form (or send ajax and not page reload?
-            return HttpResponseRedirect('/contact/thanks/')
-            #TODO: add a reverse lookup for the url like reverse('poll_detail', args=(p.id,)))
+            #TODO: could we set a message on the original form (or send ajax and not page reload?
+            return HttpResponseRedirect(reverse('contact.views.thanks'))
     else:
         form = ContactForm(initial={'sender': 'user@example.com'})
     return render_to_response('contact/index.html', {'form': form}, context_instance=RequestContext(request))
+
+
+def thanks(request):
+    return render_to_response('contact/thanks.html', {}, context_instance=RequestContext(request))

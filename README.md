@@ -4,7 +4,7 @@ Django_tutorial
 Polls to do list:
 
 # add a contact form page (different app) http://www.djangobook.com/en/1.0/chapter07/
-# email from contact poll
+# add custom validation on contact form
 
 # pieface character (paint?)
 
