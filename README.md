@@ -8,7 +8,7 @@ Polls to do list:
 # style layout more nicely (css)
 # ascii art header?
 
-# add a contact form page
+# add a contact form page (different app)
 # email from contact poll
 # add to navigation
 
@@ -34,5 +34,10 @@ Polls to do list:
 
 # run unit tests
 # registration system
+
+# CMS: defaults in admin for time and date
+# CMS: validatoin in admin for question length
+# CMS: weight in admin (or set to day?) ask Gunt
+# CMS: question as textarea rather than text box
 
 # set page title and meta tags for each template

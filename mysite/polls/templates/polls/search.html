@@ -4,4 +4,26 @@
 
 <h2>Search</h2>
 
+<!-- . didn't work for some reason -->
+<form action="" method="GET">
+    <label for="q">Search: </label>
+    <input type="text" name="q" value="{{ query|escape }}">
+    <input type="submit" value="Search">
+</form>
+
+{% if query %}
+    <p><strong>Results for "{{ query|escape }}":</strong></p>
+
+    {% if results %}
+        <ul>
+            {% for poll in results %}
+                <!-- TODO: could hightlight search term in text. Would you use a helper? -->
+                <li><a href="{% url poll_detail poll.id %}">{{ poll|escape }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No books found</p>
+    {% endif %}
+{% endif %}
+
 {% endblock %}

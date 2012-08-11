@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
+from django.db.models import Q
 from polls.models import Choice, Poll
 
 def vote(request, poll_id):
@@ -40,6 +41,16 @@ def process_suggest_choice(request, poll_id):
     return HttpResponseRedirect(reverse('poll_detail', args=(p.id,)))
 
 def search(request):
-    # look up poll items that match the search
-    # render template
-    return render_to_response('polls/search.html', {}, context_instance=RequestContext(request))
+    query = request.GET.get('q', '')
+    if query:
+        print 'got query'
+        #TODO: look up poll items that match the search
+        #TODO: look up choices that match the search
+        qset = (
+            Q(question__icontains=query) |
+            Q(choice__choice_text__icontains=query)
+        )
+        results = Poll.objects.filter(qset).distinct()
+    else:
+        results = []
+    return render_to_response('polls/search.html', {"results": results, "query": query}, context_instance=RequestContext(request))
