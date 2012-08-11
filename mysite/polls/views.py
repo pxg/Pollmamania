@@ -43,9 +43,7 @@ def process_suggest_choice(request, poll_id):
 def search(request):
     query = request.GET.get('q', '')
     if query:
-        print 'got query'
-        #TODO: look up poll items that match the search
-        #TODO: look up choices that match the search
+        print 'got query' # prints to console is development setup
         qset = (
             Q(question__icontains=query) |
             Q(choice__choice_text__icontains=query)
@@ -54,3 +52,12 @@ def search(request):
     else:
         results = []
     return render_to_response('polls/search.html', {"results": results, "query": query}, context_instance=RequestContext(request))
+
+
+def random(request):
+    # select a random poll
+    p = Poll.objects.order_by('?')[0]
+    # redirect to voting page for that poll id
+    #print 'test' + (str)p.id
+    return HttpResponseRedirect(reverse('poll_detail', args=(p.id,)))
+

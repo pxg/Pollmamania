@@ -326,13 +326,9 @@ body{
     background-color: black;
 }
 
-a, a:hover, #nav a{
+a, a:hover, a:visited, #nav a{
     text-decoration: none;
     color: #56aaff;
-}
-
-a:visited{
-    color: blue;
 }
 
 /* fonts and styles */

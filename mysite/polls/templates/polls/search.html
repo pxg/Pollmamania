@@ -17,14 +17,14 @@
     <p><strong>Results for "{{ query|escape }}":</strong></p>
 
     {% if results %}
-        <ul>
+        <ol>
             {% for poll in results %}
                 <!-- TODO: could hightlight search term in text. Would you use a helper? -->
                 <li><a href="{% url poll_detail poll.id %}">{{ poll|escape }}</a></li>
             {% endfor %}
-        </ul>
+        </ol>
     {% else %}
-        <p>No books found</p>
+        <p>No Polls found</p>
     {% endif %}
 {% endif %}
 

@@ -3,16 +3,17 @@ Django_tutorial
 
 Polls to do list:
 
-# style layout more nicely (css)
-# pieface character (paint?)
+# add random poll page
 
 # add a contact form page (different app)
 # email from contact poll
-# add to navigation
 
-# let the user suggest a poll option if one isn't present
-# validate poll options
+# pieface character (paint?)
+
+# validate new choice suggests (no duplicates)
 # let the admin see suggested poll options and approve/delete them
+
+# let users create polls
 
 # soft delete on polls
 # let user create a poll in a poll daddy style
