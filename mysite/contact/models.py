@@ -8,3 +8,6 @@ class Contact(models.Model):
     # automatic system fields
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
+
+    class Meta:
+        verbose_name_plural = "Messages"

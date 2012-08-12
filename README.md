@@ -3,7 +3,6 @@ Polls to do list:
 
 ### Forms and Functinality ######################################################################################
 
-# Feedback save to DB
 # Add feedback view to CMS
 
 # add custom validation on contact form
