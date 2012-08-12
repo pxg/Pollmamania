@@ -10,7 +10,6 @@ def index(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            # Process form data
             topic = form.cleaned_data['topic']
             message = form.cleaned_data['message']
             sender = form.cleaned_data.get('sender', 'noreply@example.com')
