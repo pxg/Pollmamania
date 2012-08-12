@@ -13,9 +13,6 @@ Polls to do list:
 
 ### Creative ######################################################################################
 
-# add a favicon
-# pieface character (paint?)
-
 # pie chart for results
 # Infographic for voting
 # Rotating polls on the homepage
