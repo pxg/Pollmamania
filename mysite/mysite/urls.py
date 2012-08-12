@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     #TODO: move contact urls to their own file
     url(r'^feedback$', 'contact.views.index'),
     url(r'^feedback/thanks', 'contact.views.thanks'),
+    url(r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/static/polls/favicon.ico'}),
 )

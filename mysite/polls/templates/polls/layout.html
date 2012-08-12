@@ -37,15 +37,13 @@
                 <li><a href="{% url contact.views.index %}">Feedback</a></li>
             </ul>
 
-            <!--
-            <img id="deocration" src="{{STATIC_URL}}polls/img/polar-bear-face.jpg">
-            -->
+            <div id="content-wrap">
+                <img class="decoration" src="{{STATIC_URL}}polls/img/pieface_8.png">
+                {% block content %}
+                {% endblock %}
+            </div>
 
-            {% block content %}
-            {% endblock %}
-
-            <!-- add clearfix before footer -->
-            <p class="clearfix footer">Pollmania was brought to you by PXG</p>
+            <p class="footer">Pollmania was brought to you by PXG</p>
         <div>
     </body>
 </html>

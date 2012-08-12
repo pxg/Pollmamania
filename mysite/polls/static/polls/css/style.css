@@ -306,6 +306,14 @@ div#search{
     padding-top: 20px;
 }
 
+img.decoration{
+    float: right;
+}
+
+div#content-wrap{
+    overflow:auto;
+}
+
 /* main navigation */
 #nav {
     list-style: none;
