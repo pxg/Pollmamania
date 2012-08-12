@@ -4,11 +4,13 @@ Polls to do list:
 ### Forms and Functinality ######################################################################################
 
 # add custom validation on contact form
-# send to friend page
-# send to friend page allow multiple (grow address list)
-# samosa links
-# validate new choice suggestions (no duplicates)
+
 # let user create poll
+# validate new choice suggestions (no duplicates)
+
+# send to friend page
+# samosa links
+# send to friend page allow multiple (grow address list)
 
 
 ### Creative ######################################################################################
@@ -25,7 +27,7 @@ Polls to do list:
 
 # output the poll list as xml and json
 # output the poll results as xml and json
-# base64 convert the url
+# base64 convert the url, allow both links
 # soft delete on polls
 # add an Ajax form for voting in polls (using web service)
 # add an Ajax form for adding a choice
@@ -53,13 +55,14 @@ Polls to do list:
 # registration system: add an optional user system (logs who owns which poll, allows edit, gives other options).
 # pagnation to homepage
 # let poll creator choose if people can add or suggest new options
+# add tags to poll
 
 
 ### CMS ######################################################################################
 
 # Let admin view soft delete on polls
-# CMS: defaults in admin for time and date
-# CMS: validatoin in admin for question length
+# CMS: set defaults in admin for time and date (also on form creation)
+# CMS: validation in admin for question length
 # CMS: weight in admin (or set to day?) ask Gunt
 # CMS: question as textarea rather than text box
 
