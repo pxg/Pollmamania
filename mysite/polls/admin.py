@@ -6,7 +6,6 @@ class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 3
 
-#admin.site.register(Poll)
 class PollAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['question']}),
@@ -20,4 +19,3 @@ class PollAdmin(admin.ModelAdmin):
     date_hierarchy = 'pub_date'
 
 admin.site.register(Poll, PollAdmin)
-#admin.site.register(Choice)

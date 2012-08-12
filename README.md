@@ -41,7 +41,6 @@ Polls to do list:
 # try out Django Debug Toolbar
 # try out Tastypie
 # is it possible/good practice to break views.py and models.py into seperate files?
-# Research why timezone if off by one hour. GMT not BST
 
 
 ### Enhanced Functionality and Improvements ######################################################################################
