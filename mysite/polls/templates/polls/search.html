@@ -14,9 +14,9 @@
 -->
 
 {% if query %}
-    <p><strong>Results for "{{ query|escape }}":</strong></p>
-
     {% if results %}
+        <p>Results for "{{ query|escape }}":</p>
+
         <ol>
             {% for poll in results %}
                 <!-- TODO: could hightlight search term in text. Would you use a helper? -->
@@ -24,7 +24,7 @@
             {% endfor %}
         </ol>
     {% else %}
-        <p>No Polls found</p>
+        <p>No Polls found for search "{{ query|escape }}"</p>
     {% endif %}
 {% endif %}
 

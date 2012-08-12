@@ -20,7 +20,8 @@ Polls to do list:
 
 ### Technical Enhancemnets & Experiments ######################################################################################
 
-# try email settings a straight to console
+# best way to log in Django
+# best way to exit/return in Django
 
 # output the poll list as xml and json
 # output the poll results as xml and json
