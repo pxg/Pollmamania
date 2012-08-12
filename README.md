@@ -3,8 +3,6 @@ Polls to do list:
 
 ### Forms and Functinality ######################################################################################
 
-# Add feedback view to CMS
-
 # add custom validation on contact form
 # send to friend page
 # send to friend page allow multiple (grow address list)
@@ -41,6 +39,7 @@ Polls to do list:
 # try out Django Debug Toolbar
 # try out Tastypie
 # is it possible/good practice to break views.py and models.py into seperate files?
+# use git master branch correctly
 
 
 ### Enhanced Functionality and Improvements ######################################################################################
