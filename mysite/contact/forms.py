@@ -8,6 +8,7 @@ TOPIC_CHOICES = (
 
 class ContactForm(forms.Form):
     topic = forms.ChoiceField(choices=TOPIC_CHOICES)
+    # add length validation here
     message = forms.CharField(widget=forms.Textarea(),
         initial="Replace with your feedback")
     sender = forms.EmailField(required=False)

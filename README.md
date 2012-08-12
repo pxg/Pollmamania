@@ -4,7 +4,8 @@ Polls to do list:
 ### Forms and Functinality ######################################################################################
 
 # Feedback save to DB
-# add a contact form page (different app) http://www.djangobook.com/en/1.0/chapter07/
+# Add feedback view to CMS
+
 # add custom validation on contact form
 # send to friend page
 # send to friend page allow multiple (grow address list)
@@ -37,6 +38,9 @@ Polls to do list:
 # run unit tests
 # votes as seperate table
 # swtich settings.py on apache_env? (should this be under version control
+# use raw sql as an experiment https://docs.djangoproject.com/en/dev/topics/db/sql/
+# try out Django Debug Toolbar
+# try out Tastypie
 
 
 ### Enhanced Functionality and Improvements ######################################################################################
