@@ -1,3 +1,4 @@
+from contact.models import Contact
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
@@ -14,7 +15,10 @@ def index(request):
             message = form.cleaned_data['message']
             sender = form.cleaned_data.get('sender', 'noreply@example.com')
 
-            print 'about to send mail'
+            # Save to DB are explict field names requied/good practice?
+            c = Contact(topic=topic, message=message, sender=sender)
+            c.save()
+
             send_mail(
                 'Feedback from your site, topic: %s' % topic,
                 message, sender,
