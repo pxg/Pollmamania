@@ -12,7 +12,7 @@ class ContactForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea(),
         initial="Replace with your feedback",
         max_length=100)
-    sender = forms.EmailField(required=False)
+    sender = forms.EmailField(required=False, label='Your e-mail address')
 
 
     # clean_<field> automatically picked up by Django
