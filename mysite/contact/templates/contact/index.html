@@ -4,12 +4,31 @@
 
 <h2>Feedback</h2>
 
-<form action="" method="POST">
-{% csrf_token %}
-    <table>
-        {{ form.as_table }}
-    </table>
-    <p><input type="submit" value="Submit"></p>
+{% if form.errors %}
+    <p style="color: red;">
+        Please correct the error{{ form.errors|pluralize }} below.
+    </p>
+{% endif %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="field">
+        {{ form.topic.errors }}
+        <label for="id_topic">Subject:</label>
+        {{ form.topic }}
+    </div>
+    <div class="field">
+        {{ form.sender.errors }}
+        <label for="id_sender">Your e-mail address:</label>
+        {{ form.sender }}
+    </div>
+    <div class="field">
+        {{ form.message.errors }}
+        <label for="id_message">Message:</label>
+        {{ form.message }}
+    </div>
+    <input type="submit" value="Submit">
 </form>
+
 
 {% endblock %}
