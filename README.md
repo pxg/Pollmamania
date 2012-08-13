@@ -3,7 +3,7 @@ Polls to do list:
 
 ### Forms and Functinality ######################################################################################
 
-# add custom validation on contact form
+# add custom validation on contact form (custom error message)
 
 # let user create poll
 # validate new choice suggestions (no duplicates)
