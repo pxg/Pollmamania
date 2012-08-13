@@ -4,11 +4,16 @@
 
 <h2>Feedback</h2>
 
-{% if form.errors %}
-    <p style="color: red;">
-        Please correct the error{{ form.errors|pluralize }} below.
-    </p>
-{% endif %}
+<div class="field{% if form.message.errors %} errors{% endif %}">
+    {% if form.message.errors %}
+        <ul>
+        {% for error in form.message.errors %}
+            <li><strong>{{ error }}</strong></li>
+            <!-- can we get the name of the field here? -->
+        {% endfor %}
+        </ul>
+    {% endif %}
+</div>
 
 <form action="" method="post">
     {% csrf_token %}

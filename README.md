@@ -3,9 +3,8 @@ Polls to do list:
 
 ### Forms and Functinality ######################################################################################
 
-# add custom validation on contact form (custom error message)
-
 # let user create poll
+# change message for field too long
 # validate new choice suggestions (no duplicates)
 
 # send to friend page
