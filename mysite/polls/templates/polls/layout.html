@@ -32,7 +32,7 @@
             <ul id="nav" class="clearfix">
                 <li><a href="{% url poll_index %}">All Polls</a></li>
                 <li><a href="{% url polls.views.random %}">Random Poll</a></li>
-                <li><a href="">Create Poll</a></li>
+                <li><a href="{% url polls.views.add_edit_poll %}">Create Poll</a></li>
                 <!--<li><a href="{% url polls.views.search %}">Search Polls</a></li>-->
                 <li><a href="{% url contact.views.index %}">Feedback</a></li>
             </ul>

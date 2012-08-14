@@ -2,7 +2,8 @@
 
 {% block content %}
 
-<h2>Feedback</h2>
+<!-- TODO: togglet title if it's add or edit -->
+<h2>Add/Edit Poll</h2>
 
 <form action="" method="post">
     {% csrf_token %}
@@ -23,6 +24,5 @@
     </div>
     <input type="submit" value="Submit">
 </form>
-
 
 {% endblock %}

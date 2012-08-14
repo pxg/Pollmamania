@@ -4,6 +4,8 @@ from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from django.db.models import Q
 from polls.models import Choice, Poll
+from forms import PollForm
+
 
 def vote(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)
@@ -26,6 +28,31 @@ def suggest_choice(request, poll_id):
     #TODO: add choice handling here
     p = get_object_or_404(Poll, pk=poll_id)
     return render_to_response('polls/suggest_choice.html', {'poll': p}, context_instance=RequestContext(request))
+
+def add_edit_poll(request):
+    if request.method == 'POST':
+        form = PollForm(request.POST)
+        if form.is_valid():
+#            topic = form.cleaned_data['topic']
+#            message = form.cleaned_data['message']
+#            sender = form.cleaned_data.get('sender', 'noreply@example.com')#
+
+#            # Save to DB are explict field names requied/good practice?
+#            c = Contact(topic=topic, message=message, sender=sender)
+#            c.save()#
+
+#            send_mail(
+#                'Feedback from your site, topic: %s' % topic,
+#                message, sender,
+#                ['petegraham1@gmail.com']
+#            )
+            class expando(object): pass 
+            p = expando() 
+            p.id = 1 
+            return HttpResponseRedirect(reverse('poll_detail', args=(p.id,)))
+    else:
+        form = PollForm()
+    return render_to_response('polls/add_edit_poll.html', {'form': form}, context_instance=RequestContext(request))
 
 
 # Validate the choice and error if not appropriate, should this be called process_suggest_choice

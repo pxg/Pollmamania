@@ -24,5 +24,7 @@ urlpatterns = patterns('',
     url(r'^(?P<poll_id>\d+)/suggest_choice/$', 'polls.views.suggest_choice'),
     url(r'^(?P<poll_id>\d+)/process_suggest_choice/$', 'polls.views.process_suggest_choice'),
     url(r'^search', 'polls.views.search'),
-     url(r'^random$', 'polls.views.random'),
+    url(r'^random$', 'polls.views.random'),
+    url(r'^add_poll$', 'polls.views.add_edit_poll'),
+    #TODO: when an id is called load edit poll
 )
