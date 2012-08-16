@@ -18,3 +18,6 @@ class PollForm(forms.Form):
         #if num_words < 4:
         #    raise forms.ValidationError("Not enough words!")
         return question
+
+class ChoiceForm(forms.Form):
+    choice_text = forms.CharField()

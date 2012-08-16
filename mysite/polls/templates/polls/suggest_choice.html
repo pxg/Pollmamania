@@ -4,7 +4,7 @@
 
 <h2>Suggest a choice for '{{ poll.question }}"</h2>
 
-<form action="{% url polls.views.process_suggest_choice poll.id %}" method="post">
+<form action="" method="post">
 {% csrf_token %}
     <input type="text" name="choice" id="choice" value="" />
     <input type="submit" value="Add Choice" />
