@@ -5,6 +5,7 @@ from django.template import RequestContext
 from django.db.models import Q
 from polls.models import Choice, Poll
 from forms import PollForm
+from django.utils import timezone
 
 
 def vote(request, poll_id):
@@ -33,22 +34,9 @@ def add_edit_poll(request):
     if request.method == 'POST':
         form = PollForm(request.POST)
         if form.is_valid():
-#            topic = form.cleaned_data['topic']
-#            message = form.cleaned_data['message']
-#            sender = form.cleaned_data.get('sender', 'noreply@example.com')#
-
-#            # Save to DB are explict field names requied/good practice?
-#            c = Contact(topic=topic, message=message, sender=sender)
-#            c.save()#
-
-#            send_mail(
-#                'Feedback from your site, topic: %s' % topic,
-#                message, sender,
-#                ['petegraham1@gmail.com']
-#            )
-            class expando(object): pass 
-            p = expando() 
-            p.id = 1 
+            #TODO: have pub_date set automatically
+            p = Poll(question=form.cleaned_data['question'], pub_date=timezone.now())
+            p.save()
             return HttpResponseRedirect(reverse('poll_detail', args=(p.id,)))
     else:
         form = PollForm()

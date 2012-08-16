@@ -11,7 +11,6 @@ class PollForm(forms.Form):
         max_length=100)
 
 
-    # clean_<field> automatically picked up by Django
     def clean_question(self):
         question = self.cleaned_data['question']
         #TODO: look and check for duplicate questions here
