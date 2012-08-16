@@ -8,19 +8,9 @@
 <form action="" method="post">
     {% csrf_token %}
     <div class="field">
-        {{ form.topic.errors }}
-        <label for="id_topic">Subject:</label>
-        {{ form.topic }}
-    </div>
-    <div class="field">
-        {{ form.sender.errors }}
-        <label for="id_sender">Your e-mail address:</label>
-        {{ form.sender }}
-    </div>
-    <div class="field">
-        {{ form.message.errors }}
-        <label for="id_message">Message:</label>
-        {{ form.message }}
+        {{ form.question.errors }}
+        <label for="id_question">Poll Question:</label>
+        {{ form.question }}
     </div>
     <input type="submit" value="Submit">
 </form>
