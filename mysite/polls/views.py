@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from django.db.models import Q
 from polls.models import Choice, Poll
-from forms import PollForm
+from forms import PollForm, ChoiceForm
 from django.utils import timezone
 
 
@@ -30,13 +30,16 @@ def suggest_choice(request, poll_id):
 
     if request.method == 'POST':
         form = ChoiceForm(request.POST)
+        # cand we loop validation (and creation) of the forms here
         if form.is_valid():
             # TODO: default votes to 0 in model
-            p.choice_set.create(choice_text=request.POST['choice'], votes=0)
+            p.choice_set.create(choice_text=form.cleaned_data['choice_text'], votes=0)
+            # can we loop saving of the forms here?
             return HttpResponseRedirect(reverse('poll_detail', args=(p.id,)))
     else:
-        form = PollForm()
-    return render_to_response('polls/suggest_choice.html', {'poll': p}, context_instance=RequestContext(request))
+        # cand we loop creation of the forms here
+        form = ChoiceForm()
+    return render_to_response('polls/suggest_choice.html', {'form': form, 'poll': p}, context_instance=RequestContext(request))
 
 
 def add_edit_poll(request):
